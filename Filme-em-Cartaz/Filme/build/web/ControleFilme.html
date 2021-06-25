@@ -1,0 +1,46 @@
+<!-- 
+    Document   : CadFilme
+    Created on : 21/03/2009, 15:08:07
+    Author     : Fernando
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        
+        <title>Pesquisa de Filmes em Cartaz</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" language="text/jascript">
+        
+        function confirmaExclusao() {
+            if(confirm("Deseja realmente excluir?")) {                                
+                document.getElementById("bt_excluir").click();
+            }
+        }
+        
+        
+</script>
+        
+        
+        
+    </head>
+    <body bgcolor="6dc3e4">
+        <center><h1>Filmes em Cartaz - Controle de Filmes</h1><center/>
+        <a href="TelaPrincipal.html">Inicio</a>  
+        <a href="ControleFilme.html">Controle de Filmes</a>   
+        <a href="ConsultaFilme.html">Consulta de Filmes em Cartaz</a><br><br>
+        
+        <form action="ServletFilme" method="get" id="formulario" >
+            Digite o Código do Filme (apenas para consulta do filme)<br> <input type="text" name="codigo" value="" /> 
+            <input type="submit" name ="botao" value="Buscar"/><br><br> <br>
+            Nome<br>  <input type="text" name="nome" value=""  style="width:210px;"/> <br> <br>
+            Data Estreia<br>  <input type="text" name="dataE" value="" style="width:210px;"/> <br> <br>
+            Data Saida<br>  <input type="text" name="dataS" value="" style="width:210px;"/> <br> <br>
+            Sinopse<br> <textarea name="sinopse" style="width:210px;"></textarea><br> <br>
+            <input type="submit" name ="botao" value="Cadastrar" style="margin-left:-80px;" />
+            <input type="submit" name ="botao" value="Atualizar" /> 
+            <input type="submit"  name="botao" value="Limpar" />
+            <input type="submit" name ="botao" value="Excluir" id="bt_excluir" style="display:none;" />               
+        </form>
+        <input type="submit" name ="botao" value="Excluir" onclick="confirmaExclusao()" style="position:absolute; margin-top:-40px; margin-left:80px;" />   
+    </body>
+</html>
